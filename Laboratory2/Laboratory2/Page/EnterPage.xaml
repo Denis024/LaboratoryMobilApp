@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Laboratory2.Page.EnterPage"
+             Title="Вход" 
+             BackgroundColor="White">
+
+    <StackLayout Orientation="Vertical"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center">
+        <Label Text="Введите логин"
+               TextColor="Black"
+               HorizontalOptions="Start"/>
+        <Entry x:Name="TBLogin"
+               Keyboard="Default"/>
+        <Label Text="Введите пароль"
+               TextColor="Black"
+               HorizontalOptions="Start"/>
+        <Entry x:Name="TBPassword"
+               IsPassword="True"/>
+        <StackLayout Orientation="Horizontal" 
+                     Padding="10">
+            <Button Text="Забыли пароль?"
+                    BackgroundColor="White"
+                    TextColor="#006EFF"
+                    FontSize="12"
+                    x:Name="BtnRestorePassword"
+                    Clicked="BtnRestorePassword_Clicked"/>
+            <Button Text="Регистрация"
+                    BackgroundColor="White"
+                    TextColor="#006EFF"
+                    FontSize="14"
+                    x:Name="BtnRegistration"
+                    Clicked="BtnRegistration_Clicked"/>
+        </StackLayout>
+        <Button Text="Войти"
+                BackgroundColor="#498C51"
+                Margin="10"
+                x:Name="BtnEnter"
+                Clicked="BtnEnter_Clicked"/>
+    </StackLayout>
+</ContentPage>

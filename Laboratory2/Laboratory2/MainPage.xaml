@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="Laboratory2.MainPage"
+                  Title="MasterApp"
+                  BackgroundColor="White">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master" BackgroundColor="#76E383">
+            <ContentPage.Content>
+                <StackLayout Padding="5, 10, 5, 5"
+                             VerticalOptions="Fill">
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="FillAndExpand"
+                                 Padding="10">
+                        <Image WidthRequest="65"
+                               HeightRequest="65"
+                               Aspect="AspectFit"
+                               Source="logo.png"
+                               VerticalOptions="Center"/>
+                        <Label Text="Гость"
+                               VerticalOptions="Center"
+                               TextColor="Black"
+                               FontSize="20"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical"
+                                 Padding="10">
+                        <Button Text="Новости"
+                                x:Name="BtnNews"
+                                Clicked="BtnNews_Clicked"
+                                BackgroundColor="#498C51"/>
+                        <Button Text="Список услуг"
+                                x:Name="BtnListOfServices"
+                                Clicked="BtnListOfServices_Clicked"
+                                BackgroundColor="#498C51"/>
+                    </StackLayout>
+                    <StackLayout VerticalOptions="EndAndExpand"
+                                 Padding="10">
+                        <Button x:Name="BtnPersonalArea"
+                                Text="Личный кабинет"
+                                BackgroundColor="#498C51"
+                                Clicked="BtnPersonalArea_Clicked"/>
+                        <Button x:Name="BtnEnter"
+                                Text="Войти"
+                                BackgroundColor="#498C51"
+                                Clicked="BtnEnter_Clicked"/>
+                        <Button Text="Регистрация"
+                                BackgroundColor="#498C51"
+                                x:Name="BtnRegistration"
+                                Clicked="BtnRegistration_Clicked"/>
+                        <Button Text="Выйти"
+                                x:Name="BtnExit"
+                                BackgroundColor="#498C51"
+                                Clicked="BtnExit_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <ContentPage.Content>
+                <Label Text="DetailPage"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+
+
+
+</MasterDetailPage>
